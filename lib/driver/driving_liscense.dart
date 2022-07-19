@@ -441,9 +441,11 @@ class _DrivingLicenseState extends State<DrivingLicense> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
@@ -456,10 +458,12 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     onTap: () {
                       _openGallery(context);
                     },
-                    title: Text("Gallery"),
+                    title: Text("Gallery",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
                     leading: Icon(
                       Icons.account_box,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   Divider(
@@ -470,10 +474,12 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text("Camera",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],
@@ -512,9 +518,11 @@ class _DrivingLicenseState extends State<DrivingLicense> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
@@ -527,10 +535,12 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     onTap: () {
                       _openGallery(context);
                     },
-                    title: Text("Gallery"),
+                    title: Text("Gallery",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
                     leading: Icon(
                       Icons.account_box,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   Divider(
@@ -541,10 +551,12 @@ class _DrivingLicenseState extends State<DrivingLicense> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text("Camera",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],

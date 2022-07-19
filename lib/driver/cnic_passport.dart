@@ -429,27 +429,31 @@ class _CnicPassportState extends State<CnicPassport> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  // Divider(
-                  //   height: 1,
-                  //   color: Colors.blue,
-                  // ),
-                  // ListTile(
-                  //   onTap: () {
-                  //     _openGallery(context);
-                  //   },
-                  //   title: Text("Gallery"),
-                  //   leading: Icon(
-                  //     Icons.account_box,
-                  //     color: Colors.blue,
-                  //   ),
-                  // ),
+                  Divider(
+                    height: 1,
+                    color: Colors.blue,
+                  ),
+                  ListTile(
+                    onTap: () {
+                      _openGallery(context);
+                    },
+                    title: Text("Gallery",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
+                    leading: Icon(
+                      Icons.account_box,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
                   Divider(
                     height: 1,
                     color: Colors.blue,
@@ -458,10 +462,13 @@ class _CnicPassportState extends State<CnicPassport> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text(
+                      "Camera",
+                      style: TextStyle(color: Theme.of(context).primaryColor),
+                    ),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],
@@ -500,27 +507,31 @@ class _CnicPassportState extends State<CnicPassport> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  // Divider(
-                  //   height: 1,
-                  //   color: Colors.blue,
-                  // ),
-                  // ListTile(
-                  //   onTap: () {
-                  //     _openGallery(context);
-                  //   },
-                  //   title: Text("Gallery"),
-                  //   leading: Icon(
-                  //     Icons.account_box,
-                  //     color: Colors.blue,
-                  //   ),
-                  // ),
+                  Divider(
+                    height: 1,
+                    color: Colors.blue,
+                  ),
+                  ListTile(
+                    onTap: () {
+                      _openGallery(context);
+                    },
+                    title: Text("Gallery",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
+                    leading: Icon(
+                      Icons.account_box,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                  ),
                   Divider(
                     height: 1,
                     color: Colors.blue,
@@ -529,10 +540,12 @@ class _CnicPassportState extends State<CnicPassport> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text("Camera",
+                        style:
+                            TextStyle(color: Theme.of(context).primaryColor)),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],

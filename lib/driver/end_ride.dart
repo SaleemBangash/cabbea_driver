@@ -39,6 +39,13 @@ class _EndRideState extends State<EndRide> with TickerProviderStateMixin {
     super.dispose();
   }
 
+  bool aChecked = false;
+  bool bChecked = false;
+  bool cChecked = false;
+  bool dChecked = false;
+  bool eChecked = false;
+  bool fChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return MyAppBar(
@@ -48,13 +55,310 @@ class _EndRideState extends State<EndRide> with TickerProviderStateMixin {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => RideConfirmed()));
         },
-        child: Center(
-          child: Text(
-            "Cancel",
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+        child: Center(child: Icon(Icons.arrow_back)),
       ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 10),
+          child: GestureDetector(
+            onTap: () => showDialog(
+              barrierDismissible: true,
+              // barrierColor: Theme.of(context).primaryColor,
+              context: context,
+              builder: (BuildContext context) {
+                return Expanded(
+                  child: AlertDialog(
+                    shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(15.0)), //this right here,
+                    backgroundColor: Color(0xff272525),
+                    content: SizedBox(
+                      height: 420,
+                      width: 600,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Why do you want to Cancel the Ride?",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              StatefulBuilder(builder:
+                                  (BuildContext context, StateSetter setState) {
+                                return Checkbox(
+                                  side: BorderSide(color: Colors.white),
+                                  // checkColor:
+                                  //     Colors.black,
+
+                                  activeColor: Theme.of(context).primaryColor,
+                                  // shape: RoundedRectangleBorder(
+                                  //     borderRadius: BorderRadius.circular(20)),
+                                  value: aChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      aChecked = value!;
+
+                                      // aChecked = false;
+                                      // cChecked = false;
+                                      // dChecked = false;
+                                      // eChecked = false;
+                                    });
+                                  },
+                                );
+                              }),
+
+                              // SizedBox(width: 5),
+                              Text(
+                                "Mistakenly offered this ride",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 14),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    StatefulBuilder(builder:
+                                        (BuildContext context,
+                                            StateSetter setState) {
+                                      return Checkbox(
+                                        side: BorderSide(color: Colors.white),
+                                        // checkColor:
+                                        //     Colors.black,
+
+                                        activeColor:
+                                            Theme.of(context).primaryColor,
+                                        // shape: RoundedRectangleBorder(
+                                        //     borderRadius: BorderRadius.circular(20)),
+                                        value: bChecked,
+                                        onChanged: (bool? value) {
+                                          setState(() {
+                                            bChecked = value!;
+
+                                            // aChecked = false;
+                                            // cChecked = false;
+                                            // dChecked = false;
+                                            // eChecked = false;
+                                          });
+                                        },
+                                      );
+                                    }),
+
+                                    // SizedBox(width: 10),
+                                    Text(
+                                      "Due to personal reasons",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 13),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(),
+                              child: Row(
+                                children: [
+                                  StatefulBuilder(builder:
+                                      (BuildContext context,
+                                          StateSetter setState) {
+                                    return Checkbox(
+                                      side: BorderSide(color: Colors.white),
+                                      // checkColor:
+                                      //     Colors.black,
+
+                                      activeColor:
+                                          Theme.of(context).primaryColor,
+                                      // shape: RoundedRectangleBorder(
+                                      //     borderRadius: BorderRadius.circular(20)),
+                                      value: cChecked,
+                                      onChanged: (bool? value) {
+                                        setState(() {
+                                          cChecked = value!;
+
+                                          // aChecked = false;
+                                          // cChecked = false;
+                                          // dChecked = false;
+                                          // eChecked = false;
+                                        });
+                                      },
+                                    );
+                                  }),
+
+                                  // SizedBox(width: 10),
+                                  Text(
+                                    "Customer did not show up",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 13),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(),
+                            child: Row(
+                              children: [
+                                StatefulBuilder(builder: (BuildContext context,
+                                    StateSetter setState) {
+                                  return Checkbox(
+                                    side: BorderSide(color: Colors.white),
+                                    // checkColor:
+                                    //     Colors.black,
+
+                                    activeColor: Theme.of(context).primaryColor,
+                                    // shape: RoundedRectangleBorder(
+                                    //     borderRadius: BorderRadius.circular(20)),
+                                    value: dChecked,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        dChecked = value!;
+
+                                        // aChecked = false;
+                                        // cChecked = false;
+                                        // dChecked = false;
+                                        // eChecked = false;
+                                      });
+                                    },
+                                  );
+                                }),
+
+                                // SizedBox(width: 10),
+                                Text(
+                                  "More than 4 passengers.",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(),
+                            child: Row(
+                              children: [
+                                StatefulBuilder(builder: (BuildContext context,
+                                    StateSetter setState) {
+                                  return Checkbox(
+                                    side: BorderSide(color: Colors.white),
+                                    // checkColor:
+                                    //     Colors.black,
+
+                                    activeColor: Theme.of(context).primaryColor,
+                                    // shape: RoundedRectangleBorder(
+                                    //     borderRadius: BorderRadius.circular(20)),
+                                    value: eChecked,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        eChecked = value!;
+
+                                        // aChecked = false;
+                                        // cChecked = false;
+                                        // dChecked = false;
+                                        // eChecked = false;
+                                      });
+                                    },
+                                  );
+                                }),
+
+                                // SizedBox(width: 10),
+                                Text(
+                                  "My Car broke down.",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(),
+                            child: Row(
+                              children: [
+                                StatefulBuilder(builder: (BuildContext context,
+                                    StateSetter setState) {
+                                  return Checkbox(
+                                    side: BorderSide(color: Colors.white),
+                                    // checkColor:
+                                    //     Colors.black,
+
+                                    activeColor: Theme.of(context).primaryColor,
+                                    // shape: RoundedRectangleBorder(
+                                    //     borderRadius: BorderRadius.circular(20)),
+                                    value: fChecked,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        fChecked = value!;
+
+                                        // aChecked = false;
+                                        // cChecked = false;
+                                        // dChecked = false;
+                                        // eChecked = false;
+                                      });
+                                    },
+                                  );
+                                }),
+
+                                // SizedBox(width: 10),
+                                Text(
+                                  "Stuck in Traffic Jam.",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => RideConfirmed()));
+                            },
+                            child: Container(
+                                height: 50,
+                                width: sizeConfig!.width(0.82),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        width: 2, color: Colors.white),
+                                    borderRadius: BorderRadius.circular(5.0),
+                                    color: Theme.of(context).primaryColor),
+                                child: Center(
+                                    child: Text("Cancel the Ride",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white)))),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+            child: Center(
+              child: Text(
+                "Cancel",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
+            ),
+          ),
+        )
+      ],
       // actions: [
       //   Padding(
       //     padding: const EdgeInsets.only(right: 10),
@@ -128,7 +432,7 @@ class _EndRideState extends State<EndRide> with TickerProviderStateMixin {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Align(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.centerRight,
             child: Container(
               height: sizeConfig!.height(0.06),
               width: sizeConfig!.width(0.45),
@@ -231,8 +535,8 @@ class _EndRideState extends State<EndRide> with TickerProviderStateMixin {
                 Container(
                     decoration: BoxDecoration(
                         color: Colors.grey,
-                        borderRadius: BorderRadius.circular(25.0),
-                        border: Border.all(width: 1, color: Colors.white)),
+                        borderRadius: BorderRadius.circular(5.0),
+                        border: Border.all(width: 2, color: Colors.white)),
                     width: sizeConfig!.width(0.82),
                     height: 40,
                     child: Center(
@@ -329,9 +633,9 @@ class _EndRideState extends State<EndRide> with TickerProviderStateMixin {
                   child: Container(
                       decoration: BoxDecoration(
                           color: Color(0xff272525),
-                          borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(5.0),
                           border: Border.all(
-                              width: 1, color: Theme.of(context).primaryColor)),
+                              width: 2, color: Theme.of(context).primaryColor)),
                       width: sizeConfig!.width(0.82),
                       height: 40,
                       child: Center(

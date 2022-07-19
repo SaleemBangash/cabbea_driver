@@ -75,12 +75,12 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
       body: Stack(
         children: [
           MapOne(),
-          // Container(
-          //     decoration: BoxDecoration(
-          //         image: DecorationImage(
-          //   image: AssetImage("assets/map.png"),
-          //   fit: BoxFit.cover,
-          // ))),
+          Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+            image: AssetImage("assets/map.png"),
+            fit: BoxFit.cover,
+          ))),
           // Positioned(
           //   top: 40,
           //   child: GestureDetector(
@@ -249,6 +249,13 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
                                           width: sizeConfig!.width(0.68),
                                           height: 40,
                                           child: MySecondButton(
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          acceptOfferOne()));
+                                            },
                                             border: Border.all(
                                                 width: 1, color: Colors.white),
                                             title: "Offer your fare at RS250",
@@ -302,9 +309,9 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
                                             decoration: BoxDecoration(
                                                 color: Colors.grey,
                                                 borderRadius:
-                                                    BorderRadius.circular(25.0),
+                                                    BorderRadius.circular(5.0),
                                                 border: Border.all(
-                                                    width: 1,
+                                                    width: 2,
                                                     color: Colors.white)),
                                             width: sizeConfig!.width(0.68),
                                             height: 40,
@@ -336,8 +343,8 @@ class _AccepDriverOfferState extends State<AccepDriverOffer> {
                   child: Container(
                       decoration: BoxDecoration(
                           color: Colors.grey,
-                          borderRadius: BorderRadius.circular(25.0),
-                          border: Border.all(width: 1, color: Colors.white)),
+                          borderRadius: BorderRadius.circular(5.0),
+                          border: Border.all(width: 2, color: Colors.white)),
                       width: sizeConfig!.width(0.82),
                       height: 50,
                       child: Center(child: Text("Skip"))),

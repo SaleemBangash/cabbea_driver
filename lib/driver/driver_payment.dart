@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:cabbea_driver/driver/driver_ratings.dart';
 import 'package:flutter/material.dart';
 
 import '../main.dart';
@@ -622,7 +623,7 @@ class _DriverPaymentState extends State<DriverPayment> {
                           topRight: Radius.circular(10.0))),
                   automaticallyImplyLeading: false,
                   title: Text(
-                    "Payment Details",
+                    "My Earning",
                     style: TextStyle(color: Colors.white),
                   ),
                   backgroundColor: Theme.of(context).primaryColor,
@@ -636,7 +637,7 @@ class _DriverPaymentState extends State<DriverPayment> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               "Cabbean Details",
@@ -649,8 +650,9 @@ class _DriverPaymentState extends State<DriverPayment> {
                             ),
                             Text(
                               "Car No",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 18),
+                              style: TextStyle(
+                                  color: Theme.of(context).primaryColor,
+                                  fontSize: 18),
                             ),
                           ],
                         ),
@@ -1025,10 +1027,10 @@ class _DriverPaymentState extends State<DriverPayment> {
                           width: sizeConfig!.width(0.62),
                           height: 40,
                           child: MySecondButton(
-                              // onTap: () => Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => Rating())),
+                              onTap: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => DriverRatings())),
                               title: "Done",
                               borderRadius: BorderRadius.circular(25.0),
                               border:

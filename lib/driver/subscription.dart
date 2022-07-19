@@ -52,64 +52,69 @@ class _SubscriptionState extends State<Subscription> {
                   fontSize: 17,
                   color: Color(0xffFF8F1E)),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFF8F1E),
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  "Get Subscribe",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+                  SizedBox(width: 10),
+                  Text(
+                    "Includes Cars From \n 660Cc and above",
+                    style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Get Subscribe",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
-                ),
-              ],
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFF8F1E),
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text("Get Subscribe",
-                    style: TextStyle(fontSize: 14, color: Colors.black)),
-              ],
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "And Registration\nfrom 2007 and above",
+                    style: TextStyle(fontSize: 14, color: Colors.black),
+                  ),
+                ],
+              ),
             ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       width: 10,
+            //       height: 10,
+            //       decoration: BoxDecoration(
+            //         color: Color(0xffFF8F1E),
+            //         shape: BoxShape.circle,
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: 10,
+            //     ),
+            //     Text("Get Subscribe",
+            //         style: TextStyle(fontSize: 14, color: Colors.black)),
+            //   ],
+            // ),
+
             Text(
-              "PKR 200/Month",
+              "PKR 5000/Month",
               style: TextStyle(fontSize: 18, color: Color(0xffFF8F1E)),
             ),
           ],
@@ -134,64 +139,68 @@ class _SubscriptionState extends State<Subscription> {
                   fontSize: 17,
                   color: Color(0xffFF8F1E)),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFF8F1E),
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  "Get Subscribe",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+                  SizedBox(width: 10),
+                  Text(
+                    "Includes Cars from\n 660CC and above",
+                    style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Get Subscribe",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
-                ),
-              ],
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFF8F1E),
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text("Get Subscribe",
-                    style: TextStyle(fontSize: 14, color: Colors.black)),
-              ],
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "And Registration\nfrom 2000 and above",
+                    style: TextStyle(fontSize: 14, color: Colors.black),
+                  ),
+                ],
+              ),
             ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       width: 10,
+            //       height: 10,
+            //       decoration: BoxDecoration(
+            //         color: Color(0xffFF8F1E),
+            //         shape: BoxShape.circle,
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: 10,
+            //     ),
+            //     Text("Get Subscribe",
+            //         style: TextStyle(fontSize: 14, color: Colors.black)),
+            //   ],
+            // ),
             Text(
-              "PKR 200/Month",
+              "PKR 4000/Month",
               style: TextStyle(fontSize: 18, color: Color(0xffFF8F1E)),
             ),
           ],
@@ -210,7 +219,7 @@ class _SubscriptionState extends State<Subscription> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Cabbean",
+              "Bikee",
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 17,
@@ -229,51 +238,52 @@ class _SubscriptionState extends State<Subscription> {
                 ),
                 SizedBox(width: 10),
                 Text(
-                  "Get Subscribe",
+                  "Any Bike Model from\n 2000 and above",
                   style: TextStyle(fontSize: 14, color: Colors.black),
                 ),
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Get Subscribe",
-                  style: TextStyle(fontSize: 14, color: Colors.black),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                    color: Color(0xffFF8F1E),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text("Get Subscribe",
-                    style: TextStyle(fontSize: 14, color: Colors.black)),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       width: 10,
+            //       height: 10,
+            //       decoration: BoxDecoration(
+            //         color: Color(0xffFF8F1E),
+            //         shape: BoxShape.circle,
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: 10,
+            //     ),
+            //     Text(
+            //       "Get Subscribe",
+            //       style: TextStyle(fontSize: 14, color: Colors.black),
+            //     ),
+            //   ],
+            // ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Container(
+            //       width: 10,
+            //       height: 10,
+            //       decoration: BoxDecoration(
+            //         color: Color(0xffFF8F1E),
+            //         shape: BoxShape.circle,
+            //       ),
+            //     ),
+            //     SizedBox(
+            //       width: 10,
+            //     ),
+            //     Text("Get Subscribe",
+            //         style: TextStyle(fontSize: 14, color: Colors.black)),
+            //   ],
+            // ),
+
             Text(
-              "PKR 200/Month",
+              "PKR 1800/Month",
               style: TextStyle(fontSize: 18, color: Color(0xffFF8F1E)),
             ),
           ],

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -7,6 +7,7 @@ import '../widgets/app_bar.dart';
 import '../widgets/second_button.dart';
 import 'accept_offer_one.dart';
 import 'end_ride.dart';
+import 'registration/driver_reg_otp.dart';
 
 class RideConfirmed extends StatefulWidget {
   const RideConfirmed({Key? key}) : super(key: key);
@@ -17,26 +18,34 @@ class RideConfirmed extends StatefulWidget {
 
 class _RideConfirmedState extends State<RideConfirmed>
     with TickerProviderStateMixin {
-  AnimationController? _controller;
-  double value = 0;
+  int _counter = 0;
+  late AnimationController _controller;
+  int levelClock = 240;
 
-  @override
-  void initState() {
-    _controller ??= AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 10),
-    )..addListener(() {
-        setState(() {});
-      });
-    _controller?.repeat();
-
-    super.initState();
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
   }
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(
+        vsync: this,
+        duration: Duration(
+            seconds:
+                levelClock) // gameData.levelClock is a user entered number elsewhere in the applciation
+        );
+
+    _controller.forward();
   }
 
   @override
@@ -120,14 +129,36 @@ class _RideConfirmedState extends State<RideConfirmed>
                 SizedBox(
                   height: 20,
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 40,
+                      height: 20,
+                      color: Colors.black,
+                      child: Center(
+                        child: Countdown(
+                          animation: StepTween(
+                            begin: levelClock, // THIS IS A USER ENTERED NUMBER
+                            end: 0,
+                          ).animate(_controller),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(top: 130),
           child: Align(
-            alignment: Alignment.centerLeft,
+            alignment: Alignment.centerRight,
             child: Container(
               height: sizeConfig!.height(0.06),
               width: sizeConfig!.width(0.45),

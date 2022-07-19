@@ -2,17 +2,18 @@
 
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:cabbea_driver/driver/registration/driver_registration_screen.dart';
-import 'package:cabbea_driver/driver/settings.dart';
 import 'package:cabbea_driver/driver/settings_cabbean.dart';
 import 'package:cabbea_driver/driver/start_screen.dart';
 import 'package:cabbea_driver/driver/subscription.dart';
+import 'package:cabbea_driver/driver/terms_condition.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../main.dart';
 import '../widgets/second_button.dart';
+import 'accept_offer.dart';
 import 'chat.dart';
 import 'driver_payment.dart';
 import 'driver_profile.dart';
@@ -117,13 +118,12 @@ class _DriverDrawerState extends State<DriverDrawer> {
                 color: Theme.of(context).primaryColor,
               ),
               listTile(
-                icon: Icons.account_box_rounded,
-                title: "My Account",
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DriverRequestHistory())),
+                icon: FontAwesomeIcons.globe,
+                title: "Edit Profile",
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DriverProfile())),
               ),
+
               listTile(
                 icon: Icons.account_box_rounded,
                 title: "My plan",
@@ -133,13 +133,15 @@ class _DriverDrawerState extends State<DriverDrawer> {
               // DriverDrawerList(
               //     assetName: "assets/pro.png", data: "Get Subscription"),
               // DrawerList(assetName: "assets/pro.png", data: "Get Subscription"),
-              listTile(
-                icon: FontAwesomeIcons.globe,
-                title: "Online Registration",
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DriverProfile())),
-              ),
 
+              listTile(
+                icon: Icons.account_box_rounded,
+                title: "My Account",
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DriverRequestHistory())),
+              ),
               listTile(
                 icon: Icons.location_on,
                 title: "Add Destinaion",
@@ -156,7 +158,7 @@ class _DriverDrawerState extends State<DriverDrawer> {
                 icon: Icons.settings,
                 title: "Settings",
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Settings())),
+                    MaterialPageRoute(builder: (context) => CabbeanSettings())),
               ),
               listTile(
                 icon: Icons.share,
@@ -171,6 +173,14 @@ class _DriverDrawerState extends State<DriverDrawer> {
                 title: "Help And Support",
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => CabbeanSettings())),
+              ),
+              listTile(
+                icon: Icons.help,
+                title: "Terms And Condition",
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TermsAndCondition())),
               ),
               Divider(
                 color: Theme.of(context).primaryColor,

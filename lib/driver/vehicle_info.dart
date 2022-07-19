@@ -2,6 +2,7 @@
 
 import 'dart:io';
 
+import 'package:cabbea_driver/driver/subscription.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -453,7 +454,7 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     onTap: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ClearanceCertificate())),
+                            builder: (context) => Subscription())),
                     title: "Next",
                     borderRadius: BorderRadius.circular(25.0),
                   ),
@@ -474,9 +475,11 @@ class _VehicleInformationState extends State<VehicleInformation> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
@@ -503,10 +506,13 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text(
+                      "Camera",
+                      style: TextStyle(color: Theme.of(context).primaryColor),
+                    ),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],
@@ -545,9 +551,11 @@ class _VehicleInformationState extends State<VehicleInformation> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
-              "Choose option",
-              style: TextStyle(color: Colors.blue),
+            title: Center(
+              child: Text(
+                "Choose option",
+                style: TextStyle(color: Theme.of(context).primaryColor),
+              ),
             ),
             content: SingleChildScrollView(
               child: ListBody(
@@ -574,10 +582,13 @@ class _VehicleInformationState extends State<VehicleInformation> {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
+                    title: Text(
+                      "Camera",
+                      style: TextStyle(color: Theme.of(context).primaryColor),
+                    ),
                     leading: Icon(
                       Icons.camera,
-                      color: Colors.blue,
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                 ],

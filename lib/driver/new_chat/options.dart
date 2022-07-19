@@ -122,8 +122,9 @@ class _OptionsState extends State<Options> {
                               child: Switch(
                                 onChanged: toggleSwitch,
                                 value: onToggled,
-                                activeColor: Colors.green,
-                                activeTrackColor: Colors.green,
+                                activeColor: Theme.of(context).primaryColor,
+                                activeTrackColor:
+                                    Theme.of(context).primaryColor,
                                 inactiveThumbColor: Colors.white,
                                 inactiveTrackColor: Colors.grey,
                               )),
@@ -167,8 +168,9 @@ class _OptionsState extends State<Options> {
                               child: Switch(
                                 onChanged: toggletwoSwitch,
                                 value: isToggled,
-                                activeColor: Colors.green,
-                                activeTrackColor: Colors.green,
+                                activeColor: Theme.of(context).primaryColor,
+                                activeTrackColor:
+                                    Theme.of(context).primaryColor,
                                 inactiveThumbColor: Colors.white,
                                 inactiveTrackColor: Colors.grey,
                               )),
@@ -209,8 +211,9 @@ class _OptionsState extends State<Options> {
                               child: Switch(
                                 onChanged: togglethreeSwitch,
                                 value: ifToggled,
-                                activeColor: Colors.green,
-                                activeTrackColor: Colors.green,
+                                activeColor: Theme.of(context).primaryColor,
+                                activeTrackColor:
+                                    Theme.of(context).primaryColor,
                                 inactiveThumbColor: Colors.white,
                                 inactiveTrackColor: Colors.grey,
                               )),

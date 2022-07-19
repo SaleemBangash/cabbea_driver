@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:cabbea_driver/driver/new_chat/ride_history.dart';
 import 'package:cabbea_driver/driver/subscription.dart';
 import 'package:flutter/material.dart';
 
@@ -8,8 +9,11 @@ import 'package:flutter_switch/flutter_switch.dart';
 import '../main.dart';
 import '../utils/size_config.dart';
 import '../widgets/app_bar.dart';
+import '../widgets/second_button.dart';
 import 'accept_offer.dart';
 import 'driver_drawer.dart';
+import 'driver_rating.dart';
+import 'driver_ratings.dart';
 import 'main_screen_offline.dart';
 import 'new_chat/daily.dart';
 import 'new_chat/monthly.dart';
@@ -62,165 +66,310 @@ class _MainScreenOnlineState extends State<MainScreenOnline> {
       ],
       data: Text(""),
       body: isToggled
-          ? Container(
-              // margin: EdgeInsets.only(top: 20),
-              color: Color(0xffEBEBEB),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Center(
+          ? SingleChildScrollView(
+              child: Center(
+                child: Container(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Weekly()));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 330,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10.0)),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
                               children: [
-                                Text(
-                                  "Weekly",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).primaryColor),
+                                  child: Center(child: Icon(Icons.person)),
                                 ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Theme.of(context).primaryColor,
-                                )
+                                SizedBox(height: 5),
+                                Text("Raja"),
+                                SizedBox(height: 5),
+                                Text("1 min"),
                               ],
                             ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Daily()));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 330,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10.0)),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Daily",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .copyWith(fontWeight: FontWeight.bold),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Theme.of(context).primaryColor,
-                                )
+                                Text("Street 69 H 987(G-10,G 10/4)",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("G-10 Markaz (G 20 markaz G-10 Islamabad",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("PKR250",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
                               ],
                             ),
-                          ),
+                          ],
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
+                      Divider(
+                        thickness: 1,
+                        color: Colors.black,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Monthly()));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 330,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10.0)),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
                               children: [
-                                Text(
-                                  "Monthly",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .copyWith(fontWeight: FontWeight.bold),
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).primaryColor),
+                                  child: Center(child: Icon(Icons.person)),
                                 ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Theme.of(context).primaryColor,
-                                )
+                                SizedBox(height: 5),
+                                Text("Raja"),
+                                SizedBox(height: 5),
+                                Text("1 min"),
                               ],
                             ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Rides()));
-                        },
-                        child: Container(
-                          height: 50,
-                          width: 330,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10.0)),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "Rides",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2!
-                                      .copyWith(fontWeight: FontWeight.bold),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios,
-                                  color: Theme.of(context).primaryColor,
-                                )
+                                Text("Street 69 H 987(G-10,G 10/4)",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("G-10 Markaz (G 20 markaz G-10 Islamabad",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("PKR250",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
                               ],
                             ),
-                          ),
+                          ],
                         ),
-                      )
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.black,
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).primaryColor),
+                                  child: Center(child: Icon(Icons.person)),
+                                ),
+                                SizedBox(height: 5),
+                                Text("Raja"),
+                                SizedBox(height: 5),
+                                Text("1 min"),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Street 69 H 987(G-10,G 10/4)",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("G-10 Markaz (G 20 markaz G-10 Islamabad",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("PKR250",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.black,
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).primaryColor),
+                                  child: Center(child: Icon(Icons.person)),
+                                ),
+                                SizedBox(height: 5),
+                                Text("Raja"),
+                                SizedBox(height: 5),
+                                Text("1 min"),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Street 69 H 987(G-10,G 10/4)",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("G-10 Markaz (G 20 markaz G-10 Islamabad",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("PKR250",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.black,
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              children: [
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Theme.of(context).primaryColor),
+                                  child: Center(child: Icon(Icons.person)),
+                                ),
+                                SizedBox(height: 5),
+                                Text("Raja"),
+                                SizedBox(height: 5),
+                                Text("1 min"),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Street 69 H 987(G-10,G 10/4)",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("G-10 Markaz (G 20 markaz G-10 Islamabad",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontSize: 16)),
+                                SizedBox(height: 5),
+                                Text("PKR250",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodyText2!
+                                        .copyWith(fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      Divider(
+                        thickness: 1,
+                        color: Colors.black,
+                      ),
+                      SizedBox(height: 10),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 20),
+                          child: SizedBox(
+                            width: sizeConfig!.width(0.52),
+                            height: 40,
+                            child: MySecondButton(
+                              onTap: (() {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            AccepDriverOffer()));
+                              }),
+                              title: "Next",
+                              border: Border.all(width: 1, color: Colors.white),
+                              borderRadius: BorderRadius.circular(25.0),
+                            ),
+                          ))
                     ],
                   ),
                 ),
-              ))
+              ),
+            )
           : Center(
               child: Container(
                 child: Image.asset("assets/no_rides.png"),
@@ -240,29 +389,27 @@ class _MainScreenOnlineState extends State<MainScreenOnline> {
         backgroundColor: Color(0xff272525),
         items: [
           BottomNavigationBarItem(
-            label: "MyRides",
+            label: "Home",
             icon: GestureDetector(
                 onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MainScreenOffine())),
+                        builder: (context) => MainScreenOnline())),
                 child: Image.asset("assets/my_rides.png")),
           ),
           BottomNavigationBarItem(
-            label: "MyEarnings",
+            label: "My Rides",
             backgroundColor: Colors.white,
             icon: GestureDetector(
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => AccepDriverOffer())),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RidesHistory())),
                 child: Image.asset("assets/my_earnings.png")),
           ),
           BottomNavigationBarItem(
             label: "MyRatings",
             icon: GestureDetector(
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Subscription())),
+                    MaterialPageRoute(builder: (context) => DriverRating())),
                 child: Image.asset("assets/my_ratings.png")),
           )
         ],

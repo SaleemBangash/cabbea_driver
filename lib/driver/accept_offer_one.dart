@@ -55,10 +55,10 @@ class _acceptOfferOneState extends State<acceptOfferOne>
         Padding(
           padding: const EdgeInsets.only(right: 10),
           child: GestureDetector(
-            // onTap: () {
-            //   Navigator.push(context,
-            //       MaterialPageRoute(builder: (context) => Dashboard()));
-            // },
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => RideConfirmed()));
+            },
             child: Center(
               child: Text(
                 "Cancel",

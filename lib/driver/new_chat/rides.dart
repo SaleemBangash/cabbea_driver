@@ -1,9 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:cabbea_driver/driver/new_chat/sendEmail.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../main.dart';
 import '../../widgets/app_bar.dart';
+import '../../widgets/second_button.dart';
+import '../chat.dart';
 import '../main_screen_online.dart';
 import 'options.dart';
 
@@ -658,6 +662,101 @@ class _RidesState extends State<Rides> {
                       ],
                     ),
                     SizedBox(height: 10),
+                    GestureDetector(
+                        onTap: () => showDialog(
+                              barrierDismissible: true,
+                              // barrierColor: Theme.of(context).primaryColor,
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Expanded(
+                                  child: AlertDialog(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(
+                                            15.0)), //this right here,
+                                    backgroundColor: Color(0xff272525),
+                                    content: SizedBox(
+                                      height: 120,
+                                      child: Column(
+                                        children: [
+                                          Padding(
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                      horizontal: 20,
+                                                      vertical: 10),
+                                              child: SizedBox(
+                                                width: sizeConfig!.width(0.52),
+                                                height: 40,
+                                                child: MySecondButton(
+                                                  onTap: (() {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder:
+                                                                (context) =>
+                                                                    Chat()));
+                                                  }),
+                                                  title: "Chat With Us",
+                                                  border: Border.all(
+                                                      width: 2,
+                                                      color: Colors.white),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          5.0),
+                                                ),
+                                              )),
+                                          GestureDetector(
+                                            onTap: (() {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          SendEmail()));
+                                            }),
+                                            child: Container(
+                                                width: sizeConfig!.width(0.52),
+                                                height: 40,
+                                                decoration: BoxDecoration(
+                                                    border: Border.all(
+                                                        width: 2,
+                                                        color: Colors.white),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5.0),
+                                                    color: Theme.of(context)
+                                                        .primaryColor),
+                                                child: Center(
+                                                    child: Text("Email",
+                                                        style: TextStyle(
+                                                            fontSize: 20,
+                                                            color: Colors
+                                                                .white)))),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                        child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 20, vertical: 20),
+                            child: SizedBox(
+                              width: sizeConfig!.width(0.52),
+                              height: 40,
+                              child: MySecondButton(
+                                // onTap: (() {
+                                //   Navigator.push(
+                                //       context,
+                                //       MaterialPageRoute(
+                                //           builder: (context) => StartScreen()));
+                                // }),
+                                title: "Support",
+                                border:
+                                    Border.all(width: 2, color: Colors.white),
+                                borderRadius: BorderRadius.circular(5.0),
+                              ),
+                            ))),
                   ],
                 ),
               ),

@@ -36,31 +36,28 @@ class _DriverStartScreenState extends State<DriverStartScreen> {
           sigma: 9, // Default: 2
           child: Container(
             decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black,
-                    spreadRadius: 3,
-                    blurRadius: 1,
-                    offset: Offset(1, 1), // changes position of shadow
-                  ),
-                ],
+                // boxShadow: [
+                //   BoxShadow(
+                //     color: Colors.black,
+                //     spreadRadius: 3,
+                //     blurRadius: 1,
+                //     offset: Offset(1, 1), // changes position of shadow
+                //   ),
+                // ],
                 image: DecorationImage(
-                    image: AssetImage("assets/driver.png"),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.2), BlendMode.dstATop))),
+              image: AssetImage("assets/cabbean.jpeg"),
+              fit: BoxFit.cover,
+              // colorFilter: ColorFilter.mode(
+              //     Colors.black.withOpacity(0.2), BlendMode.dstATop)
+            )),
           ),
         ),
         Positioned(
           bottom: sizeConfig!.height(0.3),
-          left: sizeConfig!.height(0.15),
+          left: sizeConfig!.height(0.10),
           child: Column(
             children: [
-              Image.asset("assets/cabbea.png"),
-              Text(
-                "Fare for Everyone",
-                style: TextStyle(fontSize: 17, color: Colors.white),
-              ),
+              Image.asset("assets/logo1.png", height: 250, width: 250),
             ],
           ),
         ),

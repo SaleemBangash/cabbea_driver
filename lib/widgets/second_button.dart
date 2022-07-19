@@ -31,8 +31,8 @@ class MySecondButton extends StatelessWidget {
               // borderRadius: const BorderRadius.all(
               //   Radius.circular(20),
               // ),
-              border: border,
-              borderRadius: borderRadius),
+              border: Border.all(width: 2, color: Colors.white),
+              borderRadius: BorderRadius.circular(5.0)),
           child: Center(
             child: Text(
               title,
